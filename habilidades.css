@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Trava o scroll */
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #1730be;
+    font-weight: 800;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #1730be;
+    border-bottom: 3px solid #1730be;
+}
+
+.education {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+    margin-top: 5rem; /* Ajuste para não bater na nav */
+}
+
+.heading span {
+    color: #1730be;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as duas últimas caixas */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.education-box {
+    flex: 0 1 calc(33% - 2rem);
+    min-width: 28rem;
+    background-color: #0c0c0c;
+    border: 0.2rem solid #1730be;
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.education-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #1730be;
+}
+
+.education-box i {
+    font-size: 3.5rem;
+    color: #1730be;
+    margin-bottom: 1rem;
+}
+
+.education-box h3 {
+    font-size: 2.2rem;
+}
+
+.education-box .year {
+    font-size: 1.5rem;
+    color: #1730be;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.education-box p {
+    font-size: 1.3rem;
+    color: #eee;
+    line-height: 1.4;
+}
