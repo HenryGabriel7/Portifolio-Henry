@@ -1,219 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-*{
-     margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-}
-body{
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 1rem;
-    background: rgb(0, 0, 0);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    background-color: black;
-    color: white;
-}
-
-form {
-    width: 100%;
-    max-width: 30rem;
-    margin-top: -15rem; 
-    position: relative; 
-    z-index: 10;        
-}
-
-label,
-input,
-textarea,
-button{
-    display: block;
-}
-
-input,
-textarea,
-button{
-    width: 100%;
-    font: inherit;
-    padding: 1.25rem;
-    font-weight: 700;
-}
-
-input,
-textarea{
-    margin-bottom: 1rem;
-    color: white;
-    background:#1730be ;
-    border: 0.125rem solid transparent;
-    border-radius: 1.125rem;
-    transition: border-color 0.3s,
-    box-shadow 0.3s;
-}
-
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus{
     outline: none;
-    border-color: rgb(0, 119, 255);
-    box-shadow: 0 0 0 0.3125rem #1730be;
-}
-
-label{
-    margin-bottom: 0.5rem;
-    color: gray;
-}
-
-textarea{
-    min-height: 12.5;
-    resize: vertical;
-}
-
-button{
     border: none;
-    border-radius: 99px;
-    color: white;
-    background: #1730be;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover,
-button:focus{
-    outline: none;
-    background: #1730be;
-}
-
-button:disabled {
-    cursor: not-allowed;
-    background: #1730be;
-}
-
-.success{
-    color: green;
-}
-
-.error{
-    color: red;
-}
-
-form {
-    width: 100%;
-    max-width: 30rem;
-    margin-top: -15rem;
 }
 
 html {
     font-size: 62.5%;
 }
 
-header{
-    margin-top: 20px;
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HEADER --- */
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-
-.logo{
-
-    font-size: 3rem;
-    color: #1730be;
+.logo {
+    font-size: 3.5rem;
+    color: #be2a17;
     font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-    position: relative;
-}
-
-
-
-.logo:hover{
-    transform: scale(1.1);
 }
 
 nav a {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;
     color: white;
     margin-left: 4rem;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    transition: 0.3s;
 }
 
-nav a:hover,
-nav a.active {
-    color: #1730be;
-    border-bottom: 3px solid #1730be;
+nav a:hover, nav a.active {
+    color: #be2a17;
+    border-bottom: 3px solid #be2a17;
 }
 
-@media (max-width: 995px) {
-    nav {
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #1730be;
-        border-bottom: 3px solid #1730be;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #1730be;
-    }
+/* --- SEÇÃO DA IMAGEM --- */
+.home {
+    margin-top: 12rem; /* Espaço para não ficar atrás do header */
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-
-.home-img{
-    border-radius: 50% ;
-}
-
-.home-img img{
-    position: relative;
-    width: 50vh;
-    height: 20vw;
+.home-img img {
+    width: 20rem; /* Tamanho controlado para a página de contato */
+    height: 20rem;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #1730be;
-    cursor: pointer;
-    transition: 0.2s linear;
+    object-fit: cover;
+    border: 0.3rem solid #be2a17;
+    box-shadow: 0 0 25px #be2a17;
 }
 
-.home-img img:hover{
+/* --- FORMULÁRIO --- */
+form {
+    width: 90%;
+    max-width: 50rem;
+    margin: 4rem 0;
+    background: #0c0c0c;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #be2a17;
+    box-shadow: 0 0 15px rgba(190, 42, 23, 0.2);
+}
+
+label {
+    display: block;
+    font-size: 1.6rem;
+    color: #be2a17;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    background: #161616;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #be2a17;
+    box-shadow: 0 0 10px rgba(190, 42, 23, 0.5);
+}
+
+textarea {
+    height: 12rem;
+    resize: none;
+}
+
+/* --- BOTÃO --- */
+button {
+    width: 100%;
+    padding: 1.5rem;
+    background: #be2a17;
+    color: white;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    text-transform: uppercase;
 }
 
+button:hover {
+    background: #e4331b;
+    box-shadow: 0 0 20px #be2a17;
+    transform: translateY(-2px);
+}
 
-
-
-
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    header { padding: 2rem 4%; }
+    nav a { margin-left: 2rem; font-size: 1.6rem; }
+    form { width: 95%; padding: 2rem; }
+}
