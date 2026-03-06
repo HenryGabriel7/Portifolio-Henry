@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3.5rem;
+    color: #be2a17;
+    font-weight: 800;
+}
+
+nav a {
+    font-size: 2rem;
+    color: white;
+    margin-left: 4rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #be2a17;
+    border-bottom: 3px solid #be2a17;
+}
+
+/* --- SEÇÃO DA IMAGEM --- */
+.home {
+    margin-top: 12rem; /* Espaço para não ficar atrás do header */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-img img {
+    width: 20rem; /* Tamanho controlado para a página de contato */
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.3rem solid #be2a17;
+    box-shadow: 0 0 25px #be2a17;
+}
+
+/* --- FORMULÁRIO --- */
+form {
+    width: 90%;
+    max-width: 50rem;
+    margin: 4rem 0;
+    background: #0c0c0c;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #be2a17;
+    box-shadow: 0 0 15px rgba(190, 42, 23, 0.2);
+}
+
+label {
+    display: block;
+    font-size: 1.6rem;
+    color: #be2a17;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    background: #161616;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #be2a17;
+    box-shadow: 0 0 10px rgba(190, 42, 23, 0.5);
+}
+
+textarea {
+    height: 12rem;
+    resize: none;
+}
+
+/* --- BOTÃO --- */
+button {
+    width: 100%;
+    padding: 1.5rem;
+    background: #be2a17;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #e4331b;
+    box-shadow: 0 0 20px #be2a17;
+    transform: translateY(-2px);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    header { padding: 2rem 4%; }
+    nav a { margin-left: 2rem; font-size: 1.6rem; }
+    form { width: 95%; padding: 2rem; }
+}
